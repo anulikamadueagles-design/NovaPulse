@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "NovaPulse",
+    "slug": "novapulse",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "scheme": "novapulse",
+    "web": {
+      "bundler": "metro",
+      "output": "static"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "android": {
+      "package": "com.vectors.elementtech.novapulse"
+    },
+    "ios": {
+      "bundleIdentifier": "com.vectors.elementtech.novapulse"
+    }
+  }
+}
