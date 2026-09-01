@@ -28,6 +28,8 @@ function verify(t){return jwt.verify((t||'').replace(/^Bearer /,''),SECRET)}
 function publicUser(id){return db.prepare('SELECT id,name,handle,bio,avatar FROM users WHERE id=?').get(id)}
 function auth(req,res,next){try{req.user=verify(req.headers.authorization);next()}catch(e){res.status(401).json({error:'Authentication required'})}}
 
+app.get('/',(req,res)=>res.json({ok:true,name:'NovaPulse API',status:'online'}));
+app.get('/health',(req,res)=>res.status(200).json({ok:true,name:'NovaPulse API',status:'healthy',messaging:'socket.io'}));
 app.get('/api/health',(req,res)=>res.json({ok:true,name:'NovaPulse',messaging:'socket.io'}));
 
 app.post('/api/auth/register',(req,res)=>{
@@ -88,4 +90,4 @@ io.on('connection',socket=>{
  socket.on('message:typing',data=>{const receiver=Number(data.receiverId);if(receiver)io.to(`user:${receiver}`).emit('message:typing',{fromId:socket.user.id,typing:!!data.typing})});
 });
 const PORT=process.env.PORT||3000;
-server.listen(PORT,()=>console.log(`NovaPulse API + realtime messaging on ${PORT}`));
+server.listen(PORT,'0.0.0.0',()=>console.log(`NovaPulse API + realtime messaging on ${PORT}`));
