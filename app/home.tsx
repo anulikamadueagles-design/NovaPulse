@@ -2,7 +2,7 @@ import React,{useEffect,useState} from 'react';
 import {View,Text,StyleSheet,ScrollView,Pressable,TextInput,Image,Modal,Alert} from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 
-const API='http://localhost:3000/api';
+const API='https://novapulse-9d0g.onrender.com/api';
 const demo=[
 {name:'Maya Chen',handle:'@mayachen',time:'12m',text:'The future of social is not louder. It is smarter — better conversations, better communities, and more control for people.',likes:'2.8K',replies:'184',reposts:'521',img:'https://i.pravatar.cc/100?img=47'},
 {name:'Jordan Okafor',handle:'@jordanokafor',time:'34m',text:'Just shipped something I have been building for months. The feeling when an idea finally becomes real is unmatched. 🚀',likes:'1.4K',replies:'96',reposts:'207',img:'https://i.pravatar.cc/100?img=12'},

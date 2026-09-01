@@ -3,7 +3,7 @@ import {View,Text,StyleSheet,FlatList,TextInput,Pressable,KeyboardAvoidingView,P
 import {io} from 'socket.io-client';
 import {Ionicons} from '@expo/vector-icons';
 
-const API='http://localhost:3000/api'; const WS='http://localhost:3000';
+const API='https://novapulse-9d0g.onrender.com/api'; const WS='https://novapulse-9d0g.onrender.com';
 export default function Messages(){
  const [people,setPeople]=useState<any[]>([]); const [selected,setSelected]=useState<any>(null); const [messages,setMessages]=useState<any[]>([]); const [text,setText]=useState('');
  const socket=useRef<any>(null);

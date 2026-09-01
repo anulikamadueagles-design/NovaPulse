@@ -6,3 +6,4 @@ server/.env
 .expo/
 dist/
 *.log
+.DS_Store
