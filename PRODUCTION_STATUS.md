@@ -1,26 +1,21 @@
-# NovaPulse Production Status
+# NovaPulse Production Configuration
 
-Public API:
-https://novapulse-9d0g.onrender.com
+API: https://novapulse-9d0g.onrender.com
+Health: https://novapulse-9d0g.onrender.com/health
 
-Health endpoint:
-https://novapulse-9d0g.onrender.com/health
+Messaging:
+- Realtime Socket.IO transport
+- Persistent database required
+- Anti-spam/rate protection required
 
-Realtime transport:
-Socket.IO
+Before public release:
+- Configure persistent PostgreSQL/Supabase DATABASE_URL
+- Configure authentication/recovery
+- Configure media storage
+- Configure push notifications
+- Configure moderation/reporting
+- Build a signed Android APK
+- Upload APK to the website
+- Test registration, login, posting and two-user messaging
 
-Brand:
-VECTOR'S ELEMENT TECH
-
-## Required before public release
-
-1. Confirm the Render deployment is healthy.
-2. Create/connect a persistent production PostgreSQL database.
-3. Configure media storage.
-4. Configure push notifications.
-5. Configure moderation/reporting.
-6. Configure rate limiting and abuse protection.
-7. Build and sign the Android release.
-8. Put the final APK/AAB download URL on the website.
-
-Never commit passwords, tokens, database URLs, or signing credentials.
+Never commit secrets or database credentials.

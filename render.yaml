@@ -7,7 +7,9 @@ services:
     startCommand: node server.js
     healthCheckPath: /health
     envVars:
-      - key: NOVAPULSE_SECRET
-        generateValue: true
       - key: NODE_ENV
         value: production
+      - key: NOVAPULSE_SECRET
+        generateValue: true
+      - key: DATABASE_URL
+        sync: false
