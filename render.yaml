@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: novapulse-api
+    runtime: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NOVAPULSE_SECRET
+        generateValue: true
+      - key: NODE_ENV
+        value: production
