@@ -18,6 +18,13 @@
     },
     "ios": {
       "bundleIdentifier": "com.vectors.elementtech.novapulse"
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "2d57c661-115b-4302-927d-6265c5ad8fbc"
+      }
+    },
+    "jsEngine": "jsc"
   }
 }
