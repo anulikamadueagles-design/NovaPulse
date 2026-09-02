@@ -11,10 +11,15 @@
       "output": "static"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      "expo-font"
     ],
     "android": {
-      "package": "com.vectors.elementtech.novapulse"
+      "package": "com.vectors.elementtech.novapulse",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#000000"
+      }
     },
     "ios": {
       "bundleIdentifier": "com.vectors.elementtech.novapulse"
@@ -25,6 +30,7 @@
         "projectId": "2d57c661-115b-4302-927d-6265c5ad8fbc"
       }
     },
-    "jsEngine": "jsc"
+    "jsEngine": "jsc",
+    "icon": "./assets/icon.png"
   }
 }
